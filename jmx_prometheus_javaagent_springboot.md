@@ -37,3 +37,20 @@ IDEA可以在这里添加：
 ## 访问
 
 http://localhost:30100/
+
+## 参考
+
+ [JMX Exporter 规则编写教程.html](assets\references\JMX Exporter 规则编写教程.html)
+
+ [linux上使用JMX Exporter结合prometheus.html](assets\references\linux上使用JMX Exporter结合prometheus.html) 
+
+
+
+
+
+
+
+
+
+
+

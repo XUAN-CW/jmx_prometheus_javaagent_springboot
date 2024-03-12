@@ -1,9 +1,9 @@
+---
 lowercaseOutputName: true
-lowercaseOutputLabelNames: true
-
 rules:
-  - pattern: 'java.lang<type=Runtime, key=java.runtime.name><>SystemProperties: (.*)'
-    name: jvm_runtime
-    value: 1
+  - pattern: 'java.lang<type=GarbageCollector,name=(.*), ><>(CollectionCount|CollectionTime):'
+    name: jvm_gc_collection_seconds_count
+    type: COUNTER
     labels:
-      runtime: "$1"
+      gc: "$1"
+    help: "The number of times GC has occurred for the given collector"

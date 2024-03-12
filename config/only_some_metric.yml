@@ -1,9 +1,10 @@
----
+startDelaySeconds: 0
 lowercaseOutputName: true
 rules:
-  - pattern: 'java.lang<type=GarbageCollector,name=(.*), ><>(CollectionCount|CollectionTime):'
+  - pattern: 'java.lang<type=GarbageCollector,name=([^,]+)><>CollectionCount:'
     name: jvm_gc_collection_seconds_count
     type: COUNTER
     labels:
       gc: "$1"
     help: "The number of times GC has occurred for the given collector"
+whitelistObjectNames: ["java.lang:type=GarbageCollector,name=*"]

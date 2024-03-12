@@ -1,11 +1,12 @@
 lowercaseOutputName: true
-whitelistObjectNames: ["java.lang:type=GarbageCollector,name=CollectionCount"]
 rules:
-  - pattern: 'java.lang<type=GarbageCollector,name=(.*), ><>(CollectionCount):'
+  # Rule to include only the desired GC collection count metrics
+  - pattern: '^java.lang<type=GarbageCollector,name=(.*), >>(CollectionCount|CollectionTime):'
     name: jvm_gc_collection_seconds_count
     type: COUNTER
     labels:
       gc: "$1"
     help: "The number of times GC has occurred for the given collector"
+  # Catch-all rule to drop any other metrics not explicitly matched and included above
   - pattern: '.*'
     action: drop

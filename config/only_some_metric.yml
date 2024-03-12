@@ -1,5 +1,5 @@
 lowercaseOutputName: true
-whitelistObjectNames: ["java.lang:type=GarbageCollector,name=*"]
+whitelistObjectNames: ["java.lang:type=GarbageCollector,name=CollectionCount"]
 rules:
   - pattern: 'java.lang<type=GarbageCollector,name=(.*), ><>(CollectionCount):'
     name: jvm_gc_collection_seconds_count

@@ -17,6 +17,10 @@ https://github.com/prometheus/jmx_exporter/releases/tag/0.20.0
 ```
 -javaagent:C:\core\java\demo\jmx_prometheus_javaagent_springboot\config\jmx_prometheus_javaagent-0.20.0.jar=30100:C:\core\java\demo\jmx_prometheus_javaagent_springboot\config\simple-config.yml 
 ```
+```
+-javaagent:/Users/xuanchengwei/my-data/core/java/demo/jmx_prometheus_javaagent_springboot/config/jmx_prometheus_javaagent-0.20.0.jar=30100:/Users/xuanchengwei/my-data/core/java/demo/jmx_prometheus_javaagent_springboot/config/simple-config.yml 
+```
+
 
 ```
 
